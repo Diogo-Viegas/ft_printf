@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dviegas <dviegas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dviegas <dviegas@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 14:02:20 by dviegas           #+#    #+#             */
-/*   Updated: 2025/04/30 16:26:21 by dviegas          ###   ########.fr       */
+/*   Updated: 2025/05/06 16:27:24 by dviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_formats(va_list args, const char format)
 	else if (format == 's')
 		print_len += ft_printstr(va_arg(args, char *));
 	else if (format == 'p')
-		print_len += ft_print_ptr(va_arg(args, unsigned long long));
+		print_len += ft_print_ptr(va_arg(args, uintptr_t));
 	else if (format == 'd' || format == 'i')
 		print_len += ft_printnbr(va_arg(args, int));
 	else if (format == 'u')
@@ -66,40 +66,11 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (print_len);
 }
-
-// int	main(void)
-// {
-// 	int				n;
-// 	unsigned int	unum;
-// 	void			*ptr;
-// 	char			c;
-// 	char			*str;
-
-// 	n = 42;
-// 	unum = 323423423;
-// 	ptr = &n;
-// 	c = '@';
-// 	str = "Diogo";
-// 	ft_printf("================TESTES================\n");
-// 	ft_printf("POINTERS\n");
-// 	ft_printf("Hello World %p \n", ptr);
-// 	printf("Hello World %p \n", ptr);
-// 	ft_printf("NUMBERS\n");
-// 	ft_printf("Hello World %d \n", n);
-// 	printf("Hello World %d \n", n);
-// 	ft_printf("CHARS\n");
-// 	ft_printf("Hello World %c \n", c);
-// 	printf("Hello World %c \n", c);
-// 	ft_printf("STRINGS\n");
-// 	ft_printf("Hello World %s \n", str);
-// 	printf("Hello World %s \n", str);
-// 	ft_printf("UNSIGNED\n");
-// 	ft_printf("Hello World %u \n", unum);
-// 	printf("Hello World %u \n", unum);
-// 	ft_printf("HEXADECIMAL\n");
-// 	ft_printf("Hello World %x            Hello World %X\n", unum, unum);
-// 	printf("Hello World %x            Hello World %X \n", unum, unum);
-// 	ft_printf("PERCENT\n");
-// 	ft_printf("Hello World %% \n");
-// 	printf("Hello World %% \n");
-// }
+#include <limits.h>
+#include <stdio.h>
+int main (void)
+{
+	int x = 3245342;
+	ft_printf("%x\n",NULL);
+	printf("%x\n",NULL);
+}

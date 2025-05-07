@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dviegas <dviegas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dviegas <dviegas@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 14:07:17 by dviegas           #+#    #+#             */
-/*   Updated: 2025/04/30 16:06:19 by dviegas          ###   ########.fr       */
+/*   Updated: 2025/05/06 14:50:50 by dviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		ft_printnbr(int n);
 int		ft_printpercent(void);
 int		ft_ptr_len(uintptr_t num);
 void	ft_put_ptr(uintptr_t num);
-int		ft_print_ptr(unsigned long long ptr);
+int		ft_print_ptr(uintptr_t ptr);
 size_t	count_digits(long int nb);
 void	ft_putchar_fd(char c, int fd);
 char	*ft_itoa(int n);
