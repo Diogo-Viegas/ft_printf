@@ -66,11 +66,3 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (print_len);
 }
-#include <limits.h>
-#include <stdio.h>
-int main (void)
-{
-	int x = 3245342;
-	ft_printf("%x\n",NULL);
-	printf("%x\n",NULL);
-}
